@@ -44,8 +44,8 @@ h5
   font-size: 20px;
   /* color: white; */
   color: rgb(7, 86, 103);
-  font-weight: bolder
-  /* font-style: italic; */
+  font-weight: 800;
+  font-style: italic;
 
 }
 
@@ -194,19 +194,7 @@ ol
 }
 
 
-/* Continue Button */
 
-/* Blue */
-.continue {
-  border-color: #2196F3;
-  color: dodgerblue
-
-}
-
-.continue:hover {
-  background: #2196F3;
-  color: white;
-}
 
 .no-margin
 {
@@ -224,6 +212,7 @@ ol
   max-width: 75%;
   width:75%;
   min-width:75%;
+  border-color: rgb(7, 86, 103);
 }
 
 .collapsible-header:focus {
@@ -235,8 +224,55 @@ ol
   background-color: white;
 }
 
+.collapsible-intro
+{
+  font-family: "Open Sans" sans-serif;
+  color: white;
+  font-size: 16px;
+  font-weight: normal;
+}
+
+.collapsible-content
+{
+  font-family: "Open Sans" sans-serif;
+  color: rgb(7, 86, 103);
+  font-size: 16px;
+  font-weight: normal;
+}
+
+.collapsible-content-list
+{
+  font-family: "Open Sans" sans-serif;
+  color: rgb(7, 86, 103);
+  font-size: 16px;
+  font-weight: 500;
+}
+
+#drug-list.a
+{
+  list-style-type: circle;
+}
+
 
 /* collapsible ends */
+
+
+/* Consent Form */
+
+#consent-form
+{
+  width:100%;
+  height:400px;
+  min-height:400px;
+  max-height:400px;
+  background-color: white;
+  border-style: solid;
+  border-width: thin;
+  border-color : gray;
+  overflow-y: scroll;
+}
+
+/* Ends */
 
 
 
@@ -272,4 +308,10 @@ ol
 .minus-spacer
 {
   min-height: -1vh;
+}
+
+/* Button */
+.btn-large
+{
+  width:300px;
 }

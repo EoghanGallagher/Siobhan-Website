@@ -31,7 +31,8 @@
           <div class="col s12 m6 l6 center">
             <div id="speech-bubble" class="speech">
               <div class="speech-content">
-                <p id="speech-bubble-text"><b>Thank you</b> for expressing interest in our study! We are scientists at Trinity College Dublin who work on trying to figure out how to improve treatments in mental health.</p>
+                <p id="speech-bubble-text"><b>Thank you</b> very much for agreeing to participate!
+Before we can send you your formal invitation to participate we need to ask you some questions to check your suitability for this study.</p>
               </div>
               <div id="arrow" class="arrow-down"></div>
             </div>
@@ -48,20 +49,7 @@
       </div>
       <div class="col s12 m2 l2 center">
       </div>
-      <div class="col s12 m6 l6">
-        <h3>Participation can be completed from your home!</h3>
-        <span class="content-text">It solely requires answering questions about:</span>
-        <ol class="content-text">
-          <li>Your mental health treatment;</li>
-          <li>Your symptoms;</li>
-          <li>Aspects of your life at present;</li>
-          <li>Aspects of your life in the past;</li>
-        </ol>
-        <span class="content-text">... and playing some games for us.</span>
-      </div>
-      <br>
-      <br>
-      <a id="cButton" class="waves-effect waves-light btn-large blue">Continue</a>
+
     </div>
 
 
@@ -73,18 +61,14 @@
 <script type="text/javascript">
 
   var textBubbleText = [
-  "<b>Thank you</b> for expressing interest in our study! We are scientists at Trinity College Dublin who work on trying to figure out how to improve treatments in mental health.",
-  "We are really grateful you clicked and are interested in helping with mental health research!",
-  "Click 'continue' to read the information about the study and what your participation would entail."
+  "The following questions will take 10 to 15 minutes to answer",
+
   ];
-  var count = 1;
+  var count = 0;
 
   var speechBubble = document.querySelector( '#speech-bubble' );
   var speechBubbleText = document.querySelector( '#speech-bubble-text' );
   var arrow = document.querySelector( '#arrow' );
-  var button = document.querySelector( '#cButton' );
-
-  button.style.display = "none";
 
   speechBubble.addEventListener( 'click' ,
   function(){
@@ -95,10 +79,9 @@
       speechBubbleText.innerHTML = textBubbleText[count];
     }
 
-    if( count == 2 )
+    if( count == 0 )
     {
       arrow.style.display = "none";
-      button.style.display = "block";
     }
 
     count++;
