@@ -39,7 +39,7 @@
         </div>
     </div>
 
-    <div class="row">
+    <div class="row center">
       <div class="col s12 m3 l3 center">
 
       </div>
@@ -51,17 +51,18 @@
       <div class="col s12 m6 l6">
         <h3>Participation can be completed from your home!</h3>
         <span class="content-text">It solely requires answering questions about:</span>
-        <ol class="content-text">
-          <li>Your mental health treatment;</li>
-          <li>Your symptoms;</li>
-          <li>Aspects of your life at present;</li>
-          <li>Aspects of your life in the past;</li>
-        </ol>
+        <ul class="content-text">
+          <li>1. Your mental health treatment;</li>
+          <li>2. Your symptoms;</li>
+          <li>3. Aspects of your life at present;</li>
+          <li>4. Aspects of your life in the past;</li>
+        </ul>
         <span class="content-text">... and playing some games for us.</span>
+        <div class="spacer-5"></div>
+        <a href="info.html" id="cButton" class="center waves-effect waves-light btn-large blue">Continue</a>
       </div>
-      <br>
-      <br>
-      <a id="cButton" class="waves-effect waves-light btn-large blue">Continue</a>
+
+
     </div>
 
 
@@ -85,6 +86,10 @@
   var button = document.querySelector( '#cButton' );
 
   button.style.display = "none";
+
+  button.addEventListener( 'click', function() {
+    console.log( 'Clicked.....' );
+  });
 
   speechBubble.addEventListener( 'click' ,
   function(){

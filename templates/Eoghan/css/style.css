@@ -209,9 +209,9 @@ ol
 
 .collapsible
 {
-  max-width: 75%;
-  width:75%;
-  min-width:75%;
+  max-width: 100%;
+  width:100%;
+  min-width:100%;
   border-color: rgb(7, 86, 103);
 }
 
@@ -275,6 +275,19 @@ ol
 /* Ends */
 
 
+/*  Form */
+
+#screening-questionaire-form
+{
+  position: relative;
+  width:100%;
+  height:auto;
+  background-color: white;
+}
+
+/* Ends */
+
+
 
 
 /* Spacers */
@@ -314,4 +327,58 @@ ol
 .btn-large
 {
   width:300px;
+}
+
+@media (min-width: 769px)
+{
+
+}
+
+@media (max-width: 768px)
+{
+  #speech-bubble
+  {
+
+    min-height: 300px;
+    max-width: 250px;
+    min-width:495px;
+    width:495px;
+
+  }
+
+  /* Down Arrow */
+  .arrow-down
+  {
+    left: 210px;
+  }
+
+  .speech:before
+  {
+
+    left: 215px;
+    top: 334px;
+
+    transform: rotate(0deg);
+  }
+
+  .speech:after
+  {
+
+    left: 225px;
+    top: 331px;
+
+    transform: rotate(0deg);
+  }
+
+  #doc
+  {
+    margin-top: 20px;
+  }
+
+  .center
+  {
+    display:block;
+  }
+
+
 }
