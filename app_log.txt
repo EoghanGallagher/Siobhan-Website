@@ -47552,3 +47552,148 @@ Traceback (most recent call last):
   File "/Library/Python/2.7/site-packages/Flask-1.0.2-py2.7.egg/flask/templating.py", line 86, in _get_source_fast
     raise TemplateNotFound(template)
 TemplateNotFound: favicon.ico
+2018-07-17 15:51:50,037 Exception on /favicon.ico [GET]
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/Flask-1.0.2-py2.7.egg/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Library/Python/2.7/site-packages/Flask-1.0.2-py2.7.egg/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Library/Python/2.7/site-packages/Flask-1.0.2-py2.7.egg/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Library/Python/2.7/site-packages/Flask-1.0.2-py2.7.egg/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Library/Python/2.7/site-packages/Flask-1.0.2-py2.7.egg/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "app.py", line 244, in regularpage
+    return render_template(pagename)
+  File "/Library/Python/2.7/site-packages/Flask-1.0.2-py2.7.egg/flask/templating.py", line 134, in render_template
+    return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/Library/Python/2.7/site-packages/Jinja2-2.10-py2.7.egg/jinja2/environment.py", line 869, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/Library/Python/2.7/site-packages/Jinja2-2.10-py2.7.egg/jinja2/environment.py", line 830, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/Library/Python/2.7/site-packages/Jinja2-2.10-py2.7.egg/jinja2/environment.py", line 804, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "/Library/Python/2.7/site-packages/Jinja2-2.10-py2.7.egg/jinja2/loaders.py", line 113, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "/Library/Python/2.7/site-packages/Flask-1.0.2-py2.7.egg/flask/templating.py", line 58, in get_source
+    return self._get_source_fast(environment, template)
+  File "/Library/Python/2.7/site-packages/Flask-1.0.2-py2.7.egg/flask/templating.py", line 86, in _get_source_fast
+    raise TemplateNotFound(template)
+TemplateNotFound: favicon.ico
+2018-07-17 15:52:20,457 Exception on /favicon.ico [GET]
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/Flask-1.0.2-py2.7.egg/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Library/Python/2.7/site-packages/Flask-1.0.2-py2.7.egg/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Library/Python/2.7/site-packages/Flask-1.0.2-py2.7.egg/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Library/Python/2.7/site-packages/Flask-1.0.2-py2.7.egg/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Library/Python/2.7/site-packages/Flask-1.0.2-py2.7.egg/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "app.py", line 244, in regularpage
+    return render_template(pagename)
+  File "/Library/Python/2.7/site-packages/Flask-1.0.2-py2.7.egg/flask/templating.py", line 134, in render_template
+    return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/Library/Python/2.7/site-packages/Jinja2-2.10-py2.7.egg/jinja2/environment.py", line 869, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/Library/Python/2.7/site-packages/Jinja2-2.10-py2.7.egg/jinja2/environment.py", line 830, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/Library/Python/2.7/site-packages/Jinja2-2.10-py2.7.egg/jinja2/environment.py", line 804, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "/Library/Python/2.7/site-packages/Jinja2-2.10-py2.7.egg/jinja2/loaders.py", line 113, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "/Library/Python/2.7/site-packages/Flask-1.0.2-py2.7.egg/flask/templating.py", line 58, in get_source
+    return self._get_source_fast(environment, template)
+  File "/Library/Python/2.7/site-packages/Flask-1.0.2-py2.7.egg/flask/templating.py", line 86, in _get_source_fast
+    raise TemplateNotFound(template)
+TemplateNotFound: favicon.ico
+2018-07-17 15:52:49,055 Exception on /favicon.ico [GET]
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/Flask-1.0.2-py2.7.egg/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Library/Python/2.7/site-packages/Flask-1.0.2-py2.7.egg/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Library/Python/2.7/site-packages/Flask-1.0.2-py2.7.egg/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Library/Python/2.7/site-packages/Flask-1.0.2-py2.7.egg/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Library/Python/2.7/site-packages/Flask-1.0.2-py2.7.egg/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "app.py", line 244, in regularpage
+    return render_template(pagename)
+  File "/Library/Python/2.7/site-packages/Flask-1.0.2-py2.7.egg/flask/templating.py", line 134, in render_template
+    return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/Library/Python/2.7/site-packages/Jinja2-2.10-py2.7.egg/jinja2/environment.py", line 869, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/Library/Python/2.7/site-packages/Jinja2-2.10-py2.7.egg/jinja2/environment.py", line 830, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/Library/Python/2.7/site-packages/Jinja2-2.10-py2.7.egg/jinja2/environment.py", line 804, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "/Library/Python/2.7/site-packages/Jinja2-2.10-py2.7.egg/jinja2/loaders.py", line 113, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "/Library/Python/2.7/site-packages/Flask-1.0.2-py2.7.egg/flask/templating.py", line 58, in get_source
+    return self._get_source_fast(environment, template)
+  File "/Library/Python/2.7/site-packages/Flask-1.0.2-py2.7.egg/flask/templating.py", line 86, in _get_source_fast
+    raise TemplateNotFound(template)
+TemplateNotFound: favicon.ico
+2018-07-17 15:53:07,697 Exception on /favicon.ico [GET]
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/Flask-1.0.2-py2.7.egg/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Library/Python/2.7/site-packages/Flask-1.0.2-py2.7.egg/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Library/Python/2.7/site-packages/Flask-1.0.2-py2.7.egg/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Library/Python/2.7/site-packages/Flask-1.0.2-py2.7.egg/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Library/Python/2.7/site-packages/Flask-1.0.2-py2.7.egg/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "app.py", line 244, in regularpage
+    return render_template(pagename)
+  File "/Library/Python/2.7/site-packages/Flask-1.0.2-py2.7.egg/flask/templating.py", line 134, in render_template
+    return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/Library/Python/2.7/site-packages/Jinja2-2.10-py2.7.egg/jinja2/environment.py", line 869, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/Library/Python/2.7/site-packages/Jinja2-2.10-py2.7.egg/jinja2/environment.py", line 830, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/Library/Python/2.7/site-packages/Jinja2-2.10-py2.7.egg/jinja2/environment.py", line 804, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "/Library/Python/2.7/site-packages/Jinja2-2.10-py2.7.egg/jinja2/loaders.py", line 113, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "/Library/Python/2.7/site-packages/Flask-1.0.2-py2.7.egg/flask/templating.py", line 58, in get_source
+    return self._get_source_fast(environment, template)
+  File "/Library/Python/2.7/site-packages/Flask-1.0.2-py2.7.egg/flask/templating.py", line 86, in _get_source_fast
+    raise TemplateNotFound(template)
+TemplateNotFound: favicon.ico
+2018-07-17 15:53:23,546 Exception on /favicon.ico [GET]
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/Flask-1.0.2-py2.7.egg/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Library/Python/2.7/site-packages/Flask-1.0.2-py2.7.egg/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Library/Python/2.7/site-packages/Flask-1.0.2-py2.7.egg/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Library/Python/2.7/site-packages/Flask-1.0.2-py2.7.egg/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Library/Python/2.7/site-packages/Flask-1.0.2-py2.7.egg/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "app.py", line 244, in regularpage
+    return render_template(pagename)
+  File "/Library/Python/2.7/site-packages/Flask-1.0.2-py2.7.egg/flask/templating.py", line 134, in render_template
+    return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/Library/Python/2.7/site-packages/Jinja2-2.10-py2.7.egg/jinja2/environment.py", line 869, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/Library/Python/2.7/site-packages/Jinja2-2.10-py2.7.egg/jinja2/environment.py", line 830, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/Library/Python/2.7/site-packages/Jinja2-2.10-py2.7.egg/jinja2/environment.py", line 804, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "/Library/Python/2.7/site-packages/Jinja2-2.10-py2.7.egg/jinja2/loaders.py", line 113, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "/Library/Python/2.7/site-packages/Flask-1.0.2-py2.7.egg/flask/templating.py", line 58, in get_source
+    return self._get_source_fast(environment, template)
+  File "/Library/Python/2.7/site-packages/Flask-1.0.2-py2.7.egg/flask/templating.py", line 86, in _get_source_fast
+    raise TemplateNotFound(template)
+TemplateNotFound: favicon.ico

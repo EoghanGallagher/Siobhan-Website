@@ -14,17 +14,17 @@
 
 <body>
 
-<!-- Fullscreen background image -->
-<div id="" class="wrapper scrollspy">
-  <!-- <div class="tranparent-cover"></div> -->
-  <div class="row no-margin">
-    <div class="col s12 m12 l12 center">
-      <h1>Precision in Psychiatry Study</h1></div>
-  </div>
-  <div class="minus-spacer"></div>
-  <div class="row">
-    <div class="col s12 m12 l12 center">
-      <h2>Screening Questionaire</h1></div>
+  <!-- Fullscreen background image -->
+  <div id="" class="wrapper scrollspy">
+    <!-- <div class="tranparent-cover"></div> -->
+    <div class="row no-margin">
+      <div class="col s12 m12 l12 center">
+        <h1>Precision in Psychiatry Study</h1></div>
+    </div>
+    <div class="minus-spacer"></div>
+    <div class="row">
+      <div class="col s12 m12 l12 center">
+        <h2>Screening Questionaire</h1></div>
       </div>
   <div class="spacer-5">
 
@@ -35,15 +35,395 @@
   <div class="col s12 m8 offset-m2 l8 offset-l2">
     <div id="screening-questionaire-form" class="z-depth-3">
 
-      <!-- Form Goes HERE  -->
+      <div class="spacer-5"></div>
+
+
+      <!-- What is your age ? -->
+      <div class="row">
+        <div class="col s12 m1 l1"></div>
+        <div class="col s12 m4 l4"><h6>What is your age ?</h6></div>
+        <div class="col s12 m6 l6">
+
+          <select id="AgeDropdownId" name="AgeDropdown" onchange='Check()'>
+          <option value="0" disabled selected>--Select Age--</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Ends -->
+
+
+      <!-- Have you received an antidepressant prescription from your doctor in the past 2 weeks? -->
+      <div class="row">
+        <div class="col s12 m1 l1"></div>
+        <div class="col s12 m10 l10"><h6>Have you received an antidepressant prescription from your doctor in the past 2 weeks?</h6></div>
+      </div>
+      <div class="row">
+        <div class="col s12 m2 l2 offset-l2 ">
+          <label>
+        <input name="group1" class="with-gap" type="radio" checked />
+        <span>Yes</span>
+      </label>
+        </div>
+
+        <div class="col s12 m2 l1">
+          <label>
+        <input name="group1" class="with-gap" type="radio"  />
+        <span>No</span>
+      </label>
+        </div>
+      </div>
+
+      <!-- Ends -->
+
+      <!-- Please select the antidepressant that you have been prescribed from the list below: -->
+      <div class="row">
+        <div class="col s12 m1 l1"></div>
+        <div class="col s12 m10 l10"><h6>Please select the antidepressant that you have been prescribed from the list below:</h6></div>
+      </div>
+      <div class="row">
+        <div class="col s12 m6 l6 offset-l2 ">
+          <p>
+            <label>
+              <input type="checkbox" />
+              <span>Citalopram (Celexa, Cipramil)/span>
+            </label>
+          </p>
+          <p>
+            <label>
+              <input type="checkbox" />
+              <span>Desvenlafaxine (Pristiq, Khedezla)</span>
+            </label>
+          </p>
+          <p>
+            <label>
+              <input type="checkbox" />
+              <span>Duloxetine (Cymbalta, Irenka)</span>
+            </label>
+          </p>
+          <p>
+            <label>
+              <input type="checkbox" />
+              <span>Escitalopram (Lexapro, Cipralex)</span>
+            </label>
+          </p>
+          <p>
+            <label>
+              <input type="checkbox" />
+              <span>Fluoxetine (Prozac, Sarafem, Rapiflux)</span>
+            </label>
+          </p>
+          <p>
+            <label>
+              <input type="checkbox" />
+              <span>Fluvoxamine (Luvox, Faverin, Floxyfral, Dumyrox)</span>
+            </label>
+          </p>
+          <p>
+            <label>
+              <input type="checkbox" />
+              <span>Levomilnacipran (Fetzima)</span>
+            </label>
+          </p>
+          <p>
+            <label>
+              <input type="checkbox" />
+              <span>Paroxetine (Paxil, Seroxat, Brisdelle, Pexeva)</span>
+            </label>
+          </p>
+          <p>
+            <label>
+              <input type="checkbox" />
+              <span>Sertraline (Zoloft, Lustral)</span>
+            </label>
+          </p>
+          <p>
+            <label>
+              <input type="checkbox" />
+              <span>Venlafaxine (Effexor)</span>
+            </label>
+          </p>
+
+        </div>
+      </div>
+
+      <!-- Ends -->
+
+
+      <!-- If your antidepressant medication is not listed above, please enter the name of it here: -->
+
+      <div class="row">
+        <div class="col s12 m1 l1"></div>
+        <div class="col s12 m10 l10"><h6>If your antidepressant medication is not listed above, please enter the name of it here: </h6></div>
+      </div>
+      <div class="row">
+        <div class="col s12 m2 l2"></div>
+        <div class="col s12 offset-s1 m8 l8">
+        <div class="input-field">
+             <input placeholder="Name of medication" id="first_name" type="text" class="validate">
+        </div>
+      </div>
+      </div>
+
+      <!-- Ends -->
+
+      <!-- What dose (in milligrams per day) of this medication have you been prescribed? -->
+
+      <div class="row">
+        <div class="col s12 m1 l1"></div>
+        <div class="col s12 m10 l10"><h6>What dose (in milligrams per day) of this medication have you been prescribed? </h6></div>
+      </div>
+      <div class="row">
+        <div class="col s12 m2 l2"></div>
+        <div class="col s12 offset-s1 m8 l8">
+        <div class="input-field">
+             <input placeholder="Dose (in milligrams per day)" id="first_name" type="text" class="validate">
+        </div>
+      </div>
+      </div>
+
+      <!-- Ends -->
+
+      <!-- Have you taken your first dose ? -->
+      <div class="row">
+        <div class="col s12 m1 l1"></div>
+        <div class="col s12 m10 l10"><h6>Have you taken your first dose ? </h6></div>
+      </div>
+      <div class="row">
+        <div class="col s12 m2 l2 offset-l2 ">
+          <label>
+        <input name="group1" class="with-gap" type="radio" checked />
+        <span>Yes</span>
+      </label>
+        </div>
+
+        <div class="col s12 m2 l1">
+          <label>
+        <input name="group1" class="with-gap" type="radio"  />
+        <span>No</span>
+      </label>
+        </div>
+      </div>
+
+      <!-- Ends -->
+
+      <!-- Please upload a photo of your prescription here.-->
+      <div class="row">
+        <div class="col s12 m1 l1"></div>
+        <div class="col s12 m10 l10">
+          <h6>Please upload a photo of your prescription here. </h6>
+          <p>(Please note that the date, drug dose, drug name, and your own name must be clearly visible)</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col s12 offset-s1 m8 offset-m2 l8 offset-l2 ">
+
+            <div class = "file-field input-field">
+               <div class = "btn">
+                  <span>Browse</span>
+                  <input type = "file" />
+               </div>
+
+               <div class = "file-path-wrapper">
+                  <input class = "file-path validate" type = "text"
+                     placeholder = "Upload file" />
+               </div>
+        </div>
+      </div>
 
     </div>
+
+      <!-- Ends -->
+
+      <!-- Do you know anyone (e.g. friends/family) who has taken antidepressants for a mental health problem? -->
+      <div class="row">
+        <div class="col s12 m1 l1"></div>
+        <div class="col s12 m10 l10"><h6>Do you know anyone (e.g. friends/family) who has taken antidepressants for a mental health problem?  </h6></div>
+      </div>
+      <div class="row">
+        <div class="col s12 m2 l2 offset-l2 ">
+          <label>
+        <input name="group1" class="with-gap" type="radio" checked />
+        <span>Yes</span>
+      </label>
+        </div>
+
+        <div class="col s12 m2 l1">
+          <label>
+        <input name="group1" class="with-gap" type="radio"  />
+        <span>No</span>
+      </label>
+        </div>
+      </div>
+
+      <!-- Ends -->
+
+      <!--   Are you currently taking any other medication(s) for a brain health problem? -->
+      <div class="row">
+        <div class="col s12 m1 l1"></div>
+        <div class="col s12 m10 l10"><h6> Are you currently taking any other medication(s) for a brain health problem?  </h6></div>
+      </div>
+      <div class="row">
+        <div class="col s12 m2 l2 offset-l2 ">
+          <label>
+        <input name="group1" class="with-gap" type="radio" checked />
+        <span>Yes</span>
+      </label>
+        </div>
+
+        <div class="col s12 m2 l1">
+          <label>
+        <input name="group1" class="with-gap" type="radio"  />
+        <span>No</span>
+      </label>
+        </div>
+      </div>
+
+      <!-- Ends -->
+
+      <!-- Do you speak English fluently? -->
+      <div class="row">
+        <div class="col s12 m1 l1"></div>
+        <div class="col s12 m10 l10"><h6> Do you speak English fluently? </h6></div>
+      </div>
+      <div class="row">
+        <div class="col s12 m2 l2 offset-l2 ">
+          <label>
+        <input name="group1" class="with-gap" type="radio" checked />
+        <span>Yes</span>
+      </label>
+        </div>
+
+        <div class="col s12 m2 l1">
+          <label>
+        <input name="group1" class="with-gap" type="radio"  />
+        <span>No</span>
+      </label>
+        </div>
+      </div>
+
+      <!-- Ends -->
+
+      <!-- Where did you hear about this study?-->
+
+      <div class="row">
+        <div class="col s12 m1 l1"></div>
+        <div class="col s12 m10 l10"><h6>Where did you hear about this study?</h6></div>
+      </div>
+      <div class="row">
+        <div class="col s12 m2 l2"></div>
+        <div class="col s12 offset-s1 m8 l8">
+        <div class="input-field">
+             <input placeholder="" id="first_name" type="text" class="validate">
+        </div>
+      </div>
+      </div>
+
+      <!-- Ends -->
+
+
+      <!-- Please enter an email address that we can contact you on about this study: -->
+
+      <div class="row">
+        <div class="col s12 m1 l1"></div>
+        <div class="col s12 m10 l10"><h6>Please enter an email address that we can contact you on about this study:</h6></div>
+      </div>
+      <div class="row">
+        <div class="col s12 m2 l2"></div>
+        <div class="col s12 offset-s1 m8 l8">
+        <div class="input-field">
+             <input placeholder="" id="first_name" type="email" class="validate">
+        </div>
+      </div>
+      </div>
+
+      <!-- Ends -->
+
+      <!-- Is there anything that we have not asked about you that you think might be relevant for your participation in this study? -->
+
+      <div class="row">
+        <div class="col s12 m1 l1"></div>
+        <div class="col s12 m10 l10"><h6>Please enter an email address that we can contact you on about this study:</h6></div>
+      </div>
+      <div class="row">
+        <div class="col s12 m2 l2"></div>
+        <div class="col s12 offset-s1 m8 l8">
+        <div class="input-field">
+             <textarea id="textarea1" class="materialize-textarea"></textarea>
+        </div>
+      </div>
+      </div>
+
+      <!-- Ends -->
+
+        <div class="spacer-5"></div>
+      <!-- Continue Button -->
+
+       <div class="row">
+         <div class="col s12 m3 l3 offset-m4 offset-l4">
+           <a class="waves-effect waves-light btn-large blue">Continue</a>
+         </div>
+       </div>
+
+      <!-- Ends -->
+
+
+
+      <div class="spacer-5"></div>
+
+    </div>
+
+
 
 
   </div>
 
 </div>
 </div>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+<script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+
+
+<script type="text/javascript">
+
+options = {};
+
+//initialize all selects
+document.addEventListener('DOMContentLoaded', function() {
+   var elems = document.querySelectorAll('select');
+   var instances = M.FormSelect.init(elems, options);
+ });
+
+
+
+//Dynamically load select  1 - 100
+var ddl = document.querySelector('#AgeDropdownId');
+ for (var i = 18; i <= 70; i++) {
+     var theOption = new Option;
+     theOption.text = i;
+     theOption.value = i;
+     ddl.add(theOption);
+ }
+
+ var Check = function()
+ {
+ // window.Sex = document.getElementById("Sex").value
+ window.Age = ddl.value;
+
+
+  //Age Check
+ if (Age < 18 || Age > 70)
+ {
+   alert('You must be between 18 to 70 years old!')
+   return false
+ }
+}
+
+
+
+</script>
 
 </body>
 </html>
