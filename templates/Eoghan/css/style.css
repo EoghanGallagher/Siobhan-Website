@@ -288,6 +288,24 @@ ol
 /* Ends */
 
 
+.carousel .indicators .indicator-item {
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+    height: 8px;
+    width: 8px;
+    margin: 24px 4px;
+    background-color: rgba(60, 140, 205, 0.5);
+    -webkit-transition: background-color .3s;
+    transition: background-color .3s;
+    border-radius: 50%;
+}
+
+.carousel .indicators .indicator-item.active {
+    background-color: #2456da;
+}
+
+
 
 
 /* Spacers */
@@ -379,6 +397,3 @@ ol
   {
     display:block;
   }
-
-
-}
