@@ -61,14 +61,14 @@
       <div class="row">
         <div class="col s12 m2 l2 offset-l2 ">
           <label>
-        <input name="group1" class="with-gap" type="radio" checked />
+        <input id="prescription" value="1" name="tab" class="with-gap" type="radio" />
         <span>Yes</span>
       </label>
         </div>
 
         <div class="col s12 m2 l1">
           <label>
-        <input name="group1" class="with-gap" type="radio"  />
+        <input id="prescription" value="0" name="tab" class="with-gap" type="radio"  />
         <span>No</span>
       </label>
         </div>
@@ -85,61 +85,61 @@
         <div class="col s12 m6 l6 offset-l2 ">
           <p>
             <label>
-              <input type="checkbox" />
-              <span>Citalopram (Celexa, Cipramil)/span>
+              <input type="checkbox" name="drug" id="Citalopram" value="1" />
+              <span>Citalopram (Celexa, Cipramil)</span>
             </label>
           </p>
           <p>
             <label>
-              <input type="checkbox" />
+              <input type="checkbox" name="drug" id="Desvenlafaxine" value="2" />
               <span>Desvenlafaxine (Pristiq, Khedezla)</span>
             </label>
           </p>
           <p>
             <label>
-              <input type="checkbox" />
+              <input type="checkbox" name="drug" id="Duloxetine" value="1">
               <span>Duloxetine (Cymbalta, Irenka)</span>
             </label>
           </p>
           <p>
             <label>
-              <input type="checkbox" />
+              <input type="checkbox" name="drug" id="Escitalopram" value="1">
               <span>Escitalopram (Lexapro, Cipralex)</span>
             </label>
           </p>
           <p>
             <label>
-              <input type="checkbox" />
+              <input type="checkbox" name="drug" id="Fluoxetine" value="1">
               <span>Fluoxetine (Prozac, Sarafem, Rapiflux)</span>
             </label>
           </p>
           <p>
             <label>
-              <input type="checkbox" />
+              <input type="checkbox" name="drug" id="Fluvoxamine" value="1">
               <span>Fluvoxamine (Luvox, Faverin, Floxyfral, Dumyrox)</span>
             </label>
           </p>
           <p>
             <label>
-              <input type="checkbox" />
+              <input type="checkbox" name="drug" id="Levomilnacipran" value="1">
               <span>Levomilnacipran (Fetzima)</span>
             </label>
           </p>
           <p>
             <label>
-              <input type="checkbox" />
+              <input type="checkbox" name="drug" id="Paroxetine" value="1">
               <span>Paroxetine (Paxil, Seroxat, Brisdelle, Pexeva)</span>
             </label>
           </p>
           <p>
             <label>
-              <input type="checkbox" />
+              <input type="checkbox" name="drug" id="Sertraline" value="1">
               <span>Sertraline (Zoloft, Lustral)</span>
             </label>
           </p>
           <p>
             <label>
-              <input type="checkbox" />
+              <input type="checkbox" name="drug" id="Venlafaxine" value="1">
               <span>Venlafaxine (Effexor)</span>
             </label>
           </p>
@@ -160,7 +160,7 @@
         <div class="col s12 m2 l2"></div>
         <div class="col s12 offset-s1 m8 l8">
         <div class="input-field">
-             <input placeholder="Name of medication" id="first_name" type="text" class="validate">
+             <textarea class="materialize-textarea" rows="1" cols="15" name="drug" id="other-drug"></textarea>
         </div>
       </div>
       </div>
@@ -177,7 +177,8 @@
         <div class="col s12 m2 l2"></div>
         <div class="col s12 offset-s1 m8 l8">
         <div class="input-field">
-             <input placeholder="Dose (in milligrams per day)" id="first_name" type="text" class="validate">
+             <input id="getdose" name="getdose" placeholder="Dose (in milligrams per day)" id="first_name" type="text" class="validate">
+
         </div>
       </div>
       </div>
@@ -192,16 +193,30 @@
       <div class="row">
         <div class="col s12 m2 l2 offset-l2 ">
           <label>
-        <input name="group1" class="with-gap" type="radio" checked />
+        <input type="radio" class="with-gap" onclick="javascript:yesnoCheck1();" name="Taken_1" id="Taken_yes1" value="1">
         <span>Yes</span>
       </label>
         </div>
 
         <div class="col s12 m2 l1">
           <label>
-        <input name="group1" class="with-gap" type="radio"  />
+
+        <input type="radio" class="with-gap" onclick="javascript:yesnoCheck1();" name="Taken_1" id="Taken_no1" value="0">
         <span>No</span>
       </label>
+        </div>
+      </div>
+
+      <!-- Ends -->
+
+
+      <!--How many days ago did you take your first Dose -->
+      <div class="row">
+        <div class="col s12 m1 l1"></div>
+        <div class="col s12 m4 l4"><h6>How many days ago did you take your first dose?</h6></div>
+        <div class="col s12 m6 l6">
+
+        <select id="when1" name="whenPast"><option value="">--Today (0 days)--</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option><option value="10">10</option><option value="11">11</option><option value="12">12</option><option value="13">13</option><option value="14">14</option></select>
         </div>
       </div>
 
@@ -221,7 +236,7 @@
             <div class = "file-field input-field">
                <div class = "btn blue">
                   <span>Browse</span>
-                  <input type = "file" />
+                  <input id="imgUpload" name="PrescriptionUpload" type = "file" />
                </div>
 
                <div class = "file-path-wrapper">
@@ -243,14 +258,15 @@
       <div class="row">
         <div class="col s12 m2 l2 offset-l2 ">
           <label>
-        <input name="group1" class="with-gap" type="radio" checked />
+
+        <input type="radio" class="with-gap" onclick="javascript:yesnoCheck();" name="yesno" id="yesCheck" value="1">
         <span>Yes</span>
       </label>
         </div>
 
         <div class="col s12 m2 l1">
           <label>
-        <input name="group1" class="with-gap" type="radio"  />
+        <input type="radio"  class="with-gap" onclick="javascript:yesnoCheck();" name="yesno" id="noCheck" value="0">
         <span>No</span>
       </label>
         </div>
