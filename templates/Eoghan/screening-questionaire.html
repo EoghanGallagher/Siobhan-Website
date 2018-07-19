@@ -13,7 +13,7 @@
 </head>
 
 <body>
-
+  <form id="postquiz" action="done" method="post">
   <!-- Fullscreen background image -->
   <div id="" class="wrapper scrollspy">
     <!-- <div class="tranparent-cover"></div> -->
@@ -32,17 +32,17 @@
 
 
 <div class="row">
-  <div class="col s12 m8 offset-m2 l8 offset-l2">
+  <div class="col s12 m10 offset-m1 l8 offset-l2">
     <div id="screening-questionaire-form" class="z-depth-3">
 
       <div class="spacer-5"></div>
 
 
-      <!-- What is your age ? -->
+      <!-- 1. What is your age ? -->
       <div class="row">
-        <div class="col s12 m1 l1"></div>
-        <div class="col s12 m4 l4"><h6>What is your age ?</h6></div>
-        <div class="col s12 m6 l6">
+
+        <div class="col s5 offset-s1 m5 offset-m1 l3 offset-l1"><h6>What is your age ?</h6></div>
+        <div class="col s5 m5 l5">
 
           <select id="AgeDropdownId" name="AgeDropdown" onchange='Check()'>
           <option value="0" disabled selected>--Select Age--</option>
@@ -53,20 +53,20 @@
       <!-- Ends -->
 
 
-      <!-- Have you received an antidepressant prescription from your doctor in the past 2 weeks? -->
+      <!-- 2. Have you received an antidepressant prescription from your doctor in the past 2 weeks? -->
       <div class="row">
-        <div class="col s12 m1 l1"></div>
-        <div class="col s12 m10 l10"><h6>Have you received an antidepressant prescription from your doctor in the past 2 weeks?</h6></div>
+
+        <div class="col s10 offset-s1 m10 offset-m1 l10 offset-l1"><h6>Have you received an antidepressant prescription from your doctor in the past 2 weeks?</h6></div>
       </div>
       <div class="row">
-        <div class="col s12 m2 l2 offset-l2 ">
+        <div class="col s10 offset-s1 m2 offset-m2 l2 offset-l2 ">
           <label>
         <input id="prescription" value="1" name="tab" class="with-gap" type="radio" />
         <span>Yes</span>
       </label>
         </div>
 
-        <div class="col s12 m2 l1">
+        <div class="col s10 offset-s1 m2 l1">
           <label>
         <input id="prescription" value="0" name="tab" class="with-gap" type="radio"  />
         <span>No</span>
@@ -74,15 +74,33 @@
         </div>
       </div>
 
+      <div class="row">
+        <div class="col s12 m2 offset-m2 l2 offset-l2 ">
+        <div id="div1" class="tab">
+      <!-- proceed with other questions -->
+    </div>
+  </div>
+      </div>
+
+      <div class="row">
+        <div class="col s10 offset-s1 m2 offset-m2 l2 offset-l2 ">
+        <div id="div1" class="tab">
+          <div id="div2" class="tab hide">
+          <p><font color="red">This is a requirement for participation in our study; you are not eligible.</font></p>
+        </div>
+    </div>
+  </div>
+      </div>
+
       <!-- Ends -->
 
-      <!-- Please select the antidepressant that you have been prescribed from the list below: -->
+      <!-- 3. Please select the antidepressant that you have been prescribed from the list below: -->
       <div class="row">
-        <div class="col s12 m1 l1"></div>
-        <div class="col s12 m10 l10"><h6>Please select the antidepressant that you have been prescribed from the list below:</h6></div>
+
+        <div class="col s10 offset-s1 m10 offset-m1 l10 offset-l1"><h6>Please select the antidepressant that you have been prescribed from the list below:</h6></div>
       </div>
       <div class="row">
-        <div class="col s12 m6 l6 offset-l2 ">
+        <div class="col s10 offset-s1 m6 offset-m2 l6 offset-l2 ">
           <p>
             <label>
               <input type="checkbox" name="drug" id="Citalopram" value="1" />
@@ -150,15 +168,15 @@
       <!-- Ends -->
 
 
-      <!-- If your antidepressant medication is not listed above, please enter the name of it here: -->
+      <!-- 4. If your antidepressant medication is not listed above, please enter the name of it here: -->
 
       <div class="row">
-        <div class="col s12 m1 l1"></div>
-        <div class="col s12 m10 l10"><h6>If your antidepressant medication is not listed above, please enter the name of it here: </h6></div>
+
+        <div class="col s10 offset-s1 m10 offset-m1 l10 offset-l1"><h6>If your antidepressant medication is not listed above, please enter the name of it here: </h6></div>
       </div>
       <div class="row">
-        <div class="col s12 m2 l2"></div>
-        <div class="col s12 offset-s1 m8 l8">
+
+        <div class="col s10 offset-s1 m8 offset-m1 l8 offset-l2">
         <div class="input-field">
              <textarea class="materialize-textarea" rows="1" cols="15" name="drug" id="other-drug"></textarea>
         </div>
@@ -167,17 +185,17 @@
 
       <!-- Ends -->
 
-      <!-- What dose (in milligrams per day) of this medication have you been prescribed? -->
+      <!-- 5. What dose (in milligrams per day) of this medication have you been prescribed? -->
 
       <div class="row">
-        <div class="col s12 m1 l1"></div>
-        <div class="col s12 m10 l10"><h6>What dose (in milligrams per day) of this medication have you been prescribed? </h6></div>
+
+        <div class="col s10 offset-s1 m10 offset-m1 l10 offset-l1"><h6>What dose (in milligrams per day) of this medication have you been prescribed? </h6></div>
       </div>
       <div class="row">
-        <div class="col s12 m2 l2"></div>
-        <div class="col s12 offset-s1 m8 l8">
+
+        <div class="col s10 offset-s1 m8 offset-m2 l8 offset-l2">
         <div class="input-field">
-             <input id="getdose" name="getdose" placeholder="Dose (in milligrams per day)" id="first_name" type="text" class="validate">
+             <input id="getdose" name="getdose" placeholder="Dose (in milligrams per day)" type="text" class="validate">
 
         </div>
       </div>
@@ -185,20 +203,20 @@
 
       <!-- Ends -->
 
-      <!-- Have you taken your first dose ? -->
+      <!-- 6 Have you taken your first dose ? -->
       <div class="row">
-        <div class="col s12 m1 l1"></div>
-        <div class="col s12 m10 l10"><h6>Have you taken your first dose ? </h6></div>
+
+        <div class="col s10 offset-s1 m10 offset-m1 l10 offset-l1"><h6>Have you taken your first dose ? </h6></div>
       </div>
       <div class="row">
-        <div class="col s12 m2 l2 offset-l2 ">
+        <div class="col s10 offset-s1 m2 offset-m2 l2 offset-l2 ">
           <label>
         <input type="radio" class="with-gap" onclick="javascript:yesnoCheck1();" name="Taken_1" id="Taken_yes1" value="1">
         <span>Yes</span>
       </label>
         </div>
 
-        <div class="col s12 m2 l1">
+        <div class="col s10 offset-s1 m2 offset-m2 l2">
           <label>
 
         <input type="radio" class="with-gap" onclick="javascript:yesnoCheck1();" name="Taken_1" id="Taken_no1" value="0">
@@ -207,25 +225,36 @@
         </div>
       </div>
 
-      <!-- Ends -->
-
-
-      <!--How many days ago did you take your first Dose -->
       <div class="row">
-        <div class="col s12 m1 l1"></div>
-        <div class="col s12 m4 l4"><h6>How many days ago did you take your first dose?</h6></div>
-        <div class="col s12 m6 l6">
+        <div class="col s10 offset-s1 m8 offset-m2 l8 offset-l2">
+          <div id="ifYes1" style="display:none">
+            <br>&nbsp;<br>
+            <b> What is the total dose (in milligrams) you have taken today?</b><br>(If you have not taken it yet today, please indicate the dose that you will take later today)<br>
+            <div style="padding: 5px 5px;">
+            <input rows="1" cols="8" name="doseToday" id="doseToday"/><br>
+            </div>
 
-        <select id="when1" name="whenPast"><option value="">--Today (0 days)--</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option><option value="10">10</option><option value="11">11</option><option value="12">12</option><option value="13">13</option><option value="14">14</option></select>
+            <b>How many days ago did you take your first dose?</b>
+            <select id="when1" name="whenPast"><option value="">--Today (0 days)--</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option><option value="10">10</option><option value="11">11</option><option value="12">12</option><option value="13">13</option><option value="14">14</option></select>
+            </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col s10 offset-s1 m8 offset-m2 l8 offset-l2">
+          <div id="ifNo1" style="display: none; vertical-align: top;">
+            <b>When (days from now) do you plan to take your first dose?</b>
+            <select id="when2" name="whenFuture"><option value="">--Today (0 days)--</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option><option value="10">10</option><option value="11">11</option><option value="12">12</option><option value="13">13</option><option value="14">14</option><option value="15">15</option><option value="16">16</option><option value="17">17</option><option value="18">18</option><option value="19">19</option><option value="20">20</option><option value="21">21</option><option value="22">22</option><option value="23">23</option><option value="24">24</option><option value="25">25</option><option value="26">26</option><option value="27">27</option><option value="28">28</option><option value="29">29</option><option value="30">30</option></select>
+              </div>
         </div>
       </div>
 
       <!-- Ends -->
 
-      <!-- Please upload a photo of your prescription here.-->
+      <!-- 7. Please upload a photo of your prescription here.-->
       <div class="row">
-        <div class="col s12 m1 l1"></div>
-        <div class="col s12 m10 l10">
+
+        <div class="col s10 offset-s1 m10 offset-m1 l10 offset-l1">
           <h6>Please upload a photo of your prescription here. </h6>
           <p>(Please note that the date, drug dose, drug name, and your own name must be clearly visible)</p>
         </div>
@@ -236,27 +265,30 @@
             <div class = "file-field input-field">
                <div class = "btn blue">
                   <span>Browse</span>
-                  <input id="imgUpload" name="PrescriptionUpload" type = "file" />
+                  <input id="imgUpload" name="PrescriptionUpload" type="file" value="" onchange="previewFile()" accept="image/x-png,image/gif,image/jpeg" style="margin-left: 0em;">
                </div>
-
                <div class = "file-path-wrapper">
                   <input class = "file-path validate" type = "text"
                      placeholder = "Upload file" />
                </div>
         </div>
       </div>
-
+    </div>
+    <div class="row">
+      <div class="col s12 offset-s1 m8 offset-m2 l8 offset-l2 ">
+        <textarea rows="1" cols="1" name="Base64" id="hiddenInput" style="visibility:hidden"></textarea>
+      </div>
     </div>
 
       <!-- Ends -->
 
-      <!-- Do you know anyone (e.g. friends/family) who has taken antidepressants for a mental health problem? -->
+      <!-- 8. Do you know anyone (e.g. friends/family) who has taken antidepressants for a mental health problem? -->
       <div class="row">
-        <div class="col s12 m1 l1"></div>
-        <div class="col s12 m10 l10"><h6>Do you know anyone (e.g. friends/family) who has taken antidepressants for a mental health problem?  </h6></div>
+
+        <div class="col s10 offset-s1 m10 offset-m1 l10 offset-l1"><h6>Do you know anyone (e.g. friends/family) who has taken antidepressants for a mental health problem?  </h6></div>
       </div>
       <div class="row">
-        <div class="col s12 m2 l2 offset-l2 ">
+        <div class="col s10 offset-s1 m2 offset-m2 l2 offset-l2 ">
           <label>
 
         <input type="radio" class="with-gap" onclick="javascript:yesnoCheck();" name="yesno" id="yesCheck" value="1">
@@ -264,7 +296,7 @@
       </label>
         </div>
 
-        <div class="col s12 m2 l1">
+        <div class="col s10 offset-s1 m2 offset-m2 l1 offset-l2">
           <label>
         <input type="radio"  class="with-gap" onclick="javascript:yesnoCheck();" name="yesno" id="noCheck" value="0">
         <span>No</span>
@@ -272,22 +304,26 @@
         </div>
       </div>
 
+      <input type="radio"  class="with-gap" onclick="javascript:yesnoCheck();" name="yesno" id="noCheck" value="0">
+      <input type="radio"  class="with-gap" onclick="javascript:yesnoCheck();" name="yesno" id="noCheck" value="0">
+
+
       <!-- Ends -->
 
       <!--   Are you currently taking any other medication(s) for a brain health problem? -->
       <div class="row">
-        <div class="col s12 m1 l1"></div>
-        <div class="col s12 m10 l10"><h6> Are you currently taking any other medication(s) for a brain health problem?  </h6></div>
+
+        <div class="col s10 offset-s1 m10 offset-m1 l10 offset-l1"><h6> Are you currently taking any other medication(s) for a brain health problem?  </h6></div>
       </div>
       <div class="row">
-        <div class="col s12 m2 l2 offset-l2 ">
+        <div class="col s10 offset-s1 m2 offset-m2 l2 offset-l2 ">
           <label>
         <input name="group1" class="with-gap" type="radio" checked />
         <span>Yes</span>
       </label>
         </div>
 
-        <div class="col s12 m2 l1">
+        <div class="col s10 offset-s1 m2 offset-m2 l2 offset-l2">
           <label>
         <input name="group1" class="with-gap" type="radio"  />
         <span>No</span>
@@ -299,18 +335,17 @@
 
       <!-- Do you speak English fluently? -->
       <div class="row">
-        <div class="col s12 m1 l1"></div>
-        <div class="col s12 m10 l10"><h6> Do you speak English fluently? </h6></div>
+        <div class="col s10 offset-s1 m10 offset-m1 l10 offset-l1"><h6> Do you speak English fluently? </h6></div>
       </div>
       <div class="row">
-        <div class="col s12 m2 l2 offset-l2 ">
+        <div class="col s10 offset-s1 m2 offset-m2 l2 offset-l2 ">
           <label>
         <input name="group1" class="with-gap" type="radio" checked />
         <span>Yes</span>
       </label>
         </div>
 
-        <div class="col s12 m2 l1">
+        <div class="col s10 offset-s1 m2 offset-m2 l1 offset-l2">
           <label>
         <input name="group1" class="with-gap" type="radio"  />
         <span>No</span>
@@ -323,8 +358,8 @@
       <!-- Where did you hear about this study?-->
 
       <div class="row">
-        <div class="col s12 m1 l1"></div>
-        <div class="col s12 m10 l10"><h6>Where did you hear about this study?</h6></div>
+
+        <div class="col s10 offset-s1 m10 offset-m1 l10 offset-l1"><h6>Where did you hear about this study?</h6></div>
       </div>
       <div class="row">
         <div class="col s12 m2 l2"></div>
@@ -341,8 +376,8 @@
       <!-- Please enter an email address that we can contact you on about this study: -->
 
       <div class="row">
-        <div class="col s12 m1 l1"></div>
-        <div class="col s12 m10 l10"><h6>Please enter an email address that we can contact you on about this study:</h6></div>
+
+        <div class="col s10 offset-s1 m10 offset-m1 l10 offset-l1"><h6>Please enter an email address that we can contact you on about this study:</h6></div>
       </div>
       <div class="row">
         <div class="col s12 m2 l2"></div>
@@ -358,12 +393,12 @@
       <!-- Is there anything that we have not asked about you that you think might be relevant for your participation in this study? -->
 
       <div class="row">
-        <div class="col s12 m1 l1"></div>
-        <div class="col s12 m10 l10"><h6>Is there anything that we have not asked about you that you think might be relevant for your participation in this study? </h6></div>
+
+        <div class="col s10 offset-s1 m10 offset-m1 l10 offset-l1"><h6>Is there anything that we have not asked about you that you think might be relevant for your participation in this study? </h6></div>
       </div>
       <div class="row">
-        <div class="col s12 m2 l2"></div>
-        <div class="col s12 offset-s1 m8 l8">
+
+        <div class="col s10 offset-s1 m8 offset-m2 l8 offset-l2">
         <div class="input-field">
              <textarea id="textarea1" class="materialize-textarea"></textarea>
         </div>
@@ -375,8 +410,8 @@
         <div class="spacer-5"></div>
       <!-- Continue Button -->
 
-       <div class="row">
-         <div class="col s12 m3 l3 offset-m4 offset-l4">
+       <div class="row center-align">
+         <div class="col s12 m12 l12">
            <a href="PIPS_Questionaire_intro.html" class="waves-effect waves-light btn-large blue">Continue</a>
          </div>
        </div>
@@ -400,7 +435,7 @@
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
 <script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-
+<script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.11.1/jquery.validate.min.js"></script>
 
 <script type="text/javascript">
 
@@ -437,9 +472,110 @@ var ddl = document.querySelector('#AgeDropdownId');
  }
 }
 
+function yesnoCheck() {
+  if (document.getElementById('yesCheck').checked) {
+      document.getElementById('ifYes').style.display = 'block';
+  }
+  else document.getElementById('ifYes').style.display = 'none';
+}
 
+
+function yesnoCheck1() {
+  if (document.getElementById('Taken_yes1').checked) {
+      document.getElementById('ifYes1').style.display = 'block';
+      document.getElementById('ifNo1').style.display = 'none';
+  }
+  if (document.getElementById('Taken_no1').checked){
+      document.getElementById('ifNo1').style.display = 'block';
+      document.getElementById('ifYes1').style.display = 'none';
+  }
+}
+
+function yesnoCheck2() {
+  if (document.getElementById('Taken_yes2').checked) {
+      document.getElementById('ifYes2').style.display = 'block';
+      document.getElementById('ifNo2').style.display = 'none';
+  }
+  if (document.getElementById('Taken_no2').checked){
+      document.getElementById('ifNo2').style.display = 'block';
+      document.getElementById('ifYes2').style.display = 'none';
+  }
+}
+
+
+
+
+
+//Validate Form
+
+$("#postquiz").validate({
+       rules: {
+           uname: {
+               required: true,
+               minlength: 5
+           },
+           cemail: {
+               required: true,
+               email:true
+           },
+           password: {
+       required: true,
+       minlength: 5
+     },
+     cpassword: {
+       required: true,
+       minlength: 5,
+       equalTo: "#password"
+     },
+     curl: {
+               required: true,
+               url:true
+           },
+           crole:"required",
+           ccomment: {
+       required: true,
+       minlength: 15
+           },
+           cgender:"required",
+     cagree:"required",
+       },
+       //For custom messages
+       messages: {
+           uname:{
+               required: "Enter a username",
+               minlength: "Enter at least 5 characters"
+           },
+           curl: "Enter your website",
+       },
+       errorElement : 'div',
+       errorPlacement: function(error, element) {
+         var placement = $(element).data('error');
+         if (placement) {
+           $(placement).append(error)
+         } else {
+           error.insertAfter(element);
+         }
+       }
+    });
+
+    //Ends
 
 </script>
+
+<!-- Global site tag (gtag.js) - Google AdWords: 799969281 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-799969281"></script> <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'AW-799969281'); </script>
+
+<!-- Event snippet for Bubble4 conversion page -->
+<script> gtag('event', 'conversion', {'send_to': 'AW-799969281/ga6kCPHivoQBEIGguv0C'}); </script>
+
+  <style type="text/css" media="screen">
+  .hide{
+    display:none;
+  }
+  </style>
+
+
+
 
 </body>
 </html>
