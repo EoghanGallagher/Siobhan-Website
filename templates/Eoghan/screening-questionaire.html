@@ -282,6 +282,12 @@
       </div>
     </div>
 
+    <div class="row">
+      <div class="col s12 offset-s1 m8 offset-m2 l8 offset-l2">
+        <img id="imgPreview" src="" height="250" style="margin-left: 2.5em;">
+      </div>
+    </div>
+
       <!-- Ends -->
 
       <!-- 8. Do you know anyone (e.g. friends/family) who has taken antidepressants for a mental health problem? -->
@@ -308,7 +314,7 @@
 
       <div class="row">
         <div class="col s10 offset-s1 m8 offset-m2 l8 offset-l2">
-          <div id="ifYes" style="display: block;">
+          <div id="ifYes" style="display: none;">
         <br>
           <p><b>Did they benefit from them?</b><br>
           </p><div class="alt-radio" style="">
@@ -596,6 +602,26 @@ function unhide(divID)
   if (item) {
     item.className=(item.className=='none')?'unnone':'none';
   }
+}
+
+
+function previewFile(){
+     var preview = document.getElementById('imgPreview');
+     var file    = document.getElementById('imgUpload').files[0]; //sames as here
+     var reader  = new FileReader();
+     var hiddenInput = document.getElementById('hiddenInput');
+     console.log('hiddenInput' + hiddenInput)
+     reader.onloadend = function () {
+         preview.src = reader.result;
+         hiddenInput.value = reader.result;
+        console.log('hiddenInput_val' + hiddenInput.value)
+     }
+
+     if (file) {
+         reader.readAsDataURL(file); //reads the data as a URL
+     } else {
+         preview.src = "";
+     }
 }
 
 //Validate Form
