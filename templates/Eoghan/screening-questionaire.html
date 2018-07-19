@@ -52,7 +52,7 @@
 
       <!-- Ends -->
 
-
+      <div id="tabs">
       <!-- 2. Have you received an antidepressant prescription from your doctor in the past 2 weeks? -->
       <div class="row">
 
@@ -61,14 +61,14 @@
       <div class="row">
         <div class="col s10 offset-s1 m2 offset-m2 l2 offset-l2 ">
           <label>
-        <input id="prescription" value="1" name="tab" class="with-gap" type="radio" />
+        <input id="prescription" value="1" name="tab" class="div1 with-gap" type="radio"  />
         <span>Yes</span>
       </label>
         </div>
 
         <div class="col s10 offset-s1 m2 l1">
           <label>
-        <input id="prescription" value="0" name="tab" class="with-gap" type="radio"  />
+        <input id="prescription" value="0" name="tab" class="div2 with-gap" type="radio"   />
         <span>No</span>
       </label>
         </div>
@@ -76,21 +76,23 @@
 
       <div class="row">
         <div class="col s12 m2 offset-m2 l2 offset-l2 ">
-        <div id="div1" class="tab">
+        <div id="div1 with-gap" class="tab">
       <!-- proceed with other questions -->
     </div>
   </div>
       </div>
 
       <div class="row">
-        <div class="col s10 offset-s1 m2 offset-m2 l2 offset-l2 ">
+        <div class="col s10 offset-s1 m8 offset-m2 l8 offset-l2 ">
         <div id="div1" class="tab">
-          <div id="div2" class="tab hide">
+          <div id="div2 with-gap" class="tab hide">
           <p><font color="red">This is a requirement for participation in our study; you are not eligible.</font></p>
         </div>
     </div>
   </div>
       </div>
+
+    </div>
 
       <!-- Ends -->
 
@@ -176,7 +178,7 @@
       </div>
       <div class="row">
 
-        <div class="col s10 offset-s1 m8 offset-m1 l8 offset-l2">
+        <div class="col s10 offset-s1 m8 offset-m2 l8 offset-l2">
         <div class="input-field">
              <textarea class="materialize-textarea" rows="1" cols="15" name="drug" id="other-drug"></textarea>
         </div>
@@ -260,7 +262,7 @@
         </div>
       </div>
       <div class="row">
-        <div class="col s12 offset-s1 m8 offset-m2 l8 offset-l2 ">
+        <div class="col s10 offset-s1 m8 offset-m2 l8 offset-l2 ">
 
             <div class = "file-field input-field">
                <div class = "btn blue">
@@ -296,7 +298,7 @@
       </label>
         </div>
 
-        <div class="col s10 offset-s1 m2 offset-m2 l1 offset-l2">
+        <div class="col s10 offset-s1 m2 l1">
           <label>
         <input type="radio"  class="with-gap" onclick="javascript:yesnoCheck();" name="yesno" id="noCheck" value="0">
         <span>No</span>
@@ -304,8 +306,21 @@
         </div>
       </div>
 
-      <input type="radio"  class="with-gap" onclick="javascript:yesnoCheck();" name="yesno" id="noCheck" value="0">
-      <input type="radio"  class="with-gap" onclick="javascript:yesnoCheck();" name="yesno" id="noCheck" value="0">
+      <div class="row">
+        <div class="col s10 offset-s1 m8 offset-m2 l8 offset-l2">
+          <div id="ifYes" style="display: block;">
+        <br>
+          <p><b>Did they benefit from them?</b><br>
+          </p><div class="alt-radio" style="">
+            <input type="radio" id="AD_benefit_1" name="AD_benefit" value="0"><label class="radio-label" for="AD_benefit_1"><i>No, they did not benefit</i></label><br>
+            <input type="radio" id="AD_benefit_2" name="AD_benefit" value="1"><label class="radio-label" for="AD_benefit_2"><i>I don’t know whether or not they benefited</i></label><br>
+            <input type="radio" id="AD_benefit_3" name="AD_benefit" value="2"><label class="radio-label" for="AD_benefit_3"><i>Yes, they benefited</i></label><br>
+            <input type="radio" id="AD_benefit_4" name="AD_benefit" value="3"><label class="radio-label" for="AD_benefit_4"><i>Some benefited others did not</i></label><br><p></p>
+          </div>
+            </div>
+        </div>
+      </div>
+
 
 
       <!-- Ends -->
@@ -318,16 +333,44 @@
       <div class="row">
         <div class="col s10 offset-s1 m2 offset-m2 l2 offset-l2 ">
           <label>
-        <input name="group1" class="with-gap" type="radio" checked />
+        <!-- <input name="group1" class="with-gap" type="radio" checked /> -->
+        <input class="with-gap" type="radio" onclick="javascript:yesnoCheck2();" name="Taken_2" id="Taken_yes2" value="1">
         <span>Yes</span>
       </label>
         </div>
 
-        <div class="col s10 offset-s1 m2 offset-m2 l2 offset-l2">
+        <div class="col s10 offset-s1 m2 l2">
           <label>
-        <input name="group1" class="with-gap" type="radio"  />
+        <!-- <input name="group1" class="with-gap" type="radio"  /> -->
+        <input type="radio" onclick="javascript:yesnoCheck2();" name="Taken_2" id="Taken_no2" value="0">
         <span>No</span>
       </label>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col s10 offset-s1 m8 offset-m2 l8 offset-l2">
+          <div style="margin-left: 1.5em;">
+          <div id="ifYes2" style="display: none;">
+            <b> Please enter:</b><br>
+            <b>a)</b> Name of the medication(s):<br>
+            <input name="NeuroDrugs1" id="NeuroDrugs1"><br>
+            <b>b)</b> Reason(s) for taking the medication(s):<br>
+            <textarea class="materialize-textarea" name="NeuroDrugsReason1" id="NeuroDrugsReason1"></textarea><br>
+          </div>
+
+          <div id="ifNo2" style="display: none;">
+            <p><b>If you have taken any other medications for a brain health problem <u>in the past 4 weeks</u> please enter: </b>
+            (Leave blank, if you haven't taken any)</p>
+            <b>a)</b> Name of the medication(s):<br>
+            <textarea class="materialize-textarea" rows="4" cols="80" name="NeuroDrugs2" id="NeuroDrugs2"></textarea><br>
+            <b>b)</b> Reason(s) for taking the medication(s):<br>
+            <textarea class="materialize-textarea" rows="4" cols="80" name="NeuroDrugsReason2" id="NeuroDrugsReason2"></textarea><br>
+            <b>c)</b> Reason(s) for stopping taking the medication(s):<br>
+            <textarea class="materialize-textarea" rows="4" cols="80" name="NeuroDrugsReason3" id="NeuroDrugsReason3"></textarea><br>
+                </div>
+
+            </div>
         </div>
       </div>
 
@@ -340,14 +383,15 @@
       <div class="row">
         <div class="col s10 offset-s1 m2 offset-m2 l2 offset-l2 ">
           <label>
-        <input name="group1" class="with-gap" type="radio" checked />
+        <input type="radio" name="englishfluency" id="englishfluency" value="1" class="with-gap">
         <span>Yes</span>
       </label>
         </div>
 
-        <div class="col s10 offset-s1 m2 offset-m2 l1 offset-l2">
+        <div class="col s10 offset-s1 m2 l1">
           <label>
-        <input name="group1" class="with-gap" type="radio"  />
+
+        <input type="radio" name="englishfluency" id="englishfluency" value="0" class="with-gap">
         <span>No</span>
       </label>
         </div>
@@ -362,10 +406,10 @@
         <div class="col s10 offset-s1 m10 offset-m1 l10 offset-l1"><h6>Where did you hear about this study?</h6></div>
       </div>
       <div class="row">
-        <div class="col s12 m2 l2"></div>
-        <div class="col s12 offset-s1 m8 l8">
+
+        <div class="col s10 offset-s1 m8 offset-m2 l8 offset-l2">
         <div class="input-field">
-             <input placeholder="" id="first_name" type="text" class="validate">
+             <textarea  class="materialize-textarea" style="vertical-align: middle;" rows="1" cols="15" name="StudyInfoSource" id="StudyInfoSource"></textarea>
         </div>
       </div>
       </div>
@@ -380,10 +424,10 @@
         <div class="col s10 offset-s1 m10 offset-m1 l10 offset-l1"><h6>Please enter an email address that we can contact you on about this study:</h6></div>
       </div>
       <div class="row">
-        <div class="col s12 m2 l2"></div>
-        <div class="col s12 offset-s1 m8 l8">
+
+        <div class="col s10 offset-s1 m8 offset-m2 l8 offset-l2">
         <div class="input-field">
-             <input placeholder="" id="first_name" type="email" class="validate">
+             <input type="email" id="email" name="email" value="" placeholder="example@domain.com" required="" class="validate">
         </div>
       </div>
       </div>
@@ -491,7 +535,9 @@ function yesnoCheck1() {
   }
 }
 
-function yesnoCheck2() {
+function yesnoCheck2()
+{
+
   if (document.getElementById('Taken_yes2').checked) {
       document.getElementById('ifYes2').style.display = 'block';
       document.getElementById('ifNo2').style.display = 'none';
@@ -502,9 +548,55 @@ function yesnoCheck2() {
   }
 }
 
+(function(){
+  var tabs =document.getElementById('tabs');
+  var nav = tabs.getElementsByTagName('input');
 
+  /*
+  * Hide all tabs
+  */
+  function hideTabs(){
 
+    var tab = tabs.getElementsByTagName('div');
 
+    for(var i=0;i<=nav.length;i++){
+      if(tab[i].className == 'tab')
+      {
+        console.log( tab[i].className );
+        tab[i].className = tab[i].className + ' hide';
+      }
+    }
+  }
+
+  /*
+  * Show the clicked tab
+  */
+  function showTab(tab){
+    document.getElementById(tab).className = 'tab'
+  }
+
+  hideTabs(); /* hide tabs on load */
+
+  /*
+  * Add click events
+  */
+  for(var i=0;i<nav.length;i++){
+    nav[i].onclick = function(){
+      hideTabs();
+
+      console.log( this.className );
+      showTab(this.className);
+    }
+  }
+})();
+
+function unhide(divID)
+{
+  var item = document.getElementById(divID);
+  if (item) {
+    item.className=(item.className=='none')?'unnone':'none';
+  }
+}
 
 //Validate Form
 
