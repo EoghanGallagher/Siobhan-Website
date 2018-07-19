@@ -347,10 +347,7 @@ ol
   width:300px;
 }
 
-@media (min-width: 769px)
-{
 
-}
 
 @media (max-width: 768px)
 {
@@ -397,3 +394,35 @@ ol
   {
     display:block;
   }
+
+
+
+}
+
+@media only screen and (max-width: 900px)
+{
+  .buttons-horizontal
+  {
+    display:none;
+  }
+
+  .buttons-vertical
+  {
+    display:block;
+  }
+
+}
+
+@media only screen and (min-width: 901px)
+{
+  .buttons-horizontal
+  {
+    display:block;
+  }
+
+  .buttons-vertical
+  {
+    display:none;
+  }
+
+}
